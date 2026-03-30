@@ -14,6 +14,7 @@ Memory Garden is a standalone static web artwork built around a very simple inte
 - Copy the current sentence to clipboard
 - Export the current canvas as an image
 - Fully static, no backend required
+- Visible GitHub repo entry inside the page UI
 
 ## Positioning
 
@@ -29,8 +30,27 @@ This project works well as:
 memory-garden/
 ├── index.html
 ├── README.md
-└── favicon.svg
+├── favicon.svg
+├── css/
+│   ├── base.css
+│   └── app.css
+├── js/
+│   ├── data.js
+│   ├── scene.js
+│   ├── ui.js
+│   └── main.js
+└── assets/
 ```
+
+## Architecture Notes
+
+- `index.html` only keeps the semantic page shell and resource imports
+- `css/base.css` contains shared reset and base interactive styles
+- `css/app.css` contains project-specific visual styling
+- `js/data.js` stores the poetic text dataset
+- `js/scene.js` handles canvas rendering and animation systems
+- `js/ui.js` manages DOM interactions and user actions
+- `js/main.js` wires the page together
 
 ## Local Preview
 
@@ -52,8 +72,13 @@ This project is static-only and can be deployed to:
 - GitHub Pages
 - Any basic static host
 
+## Repository
+
+- GitHub: <https://github.com/wanxb/memory-garden>
+
 ## Notes
 
 - No build step is required
 - No runtime dependency is required
 - Designed to be easy to fork, customize, and redeploy
+- Refactored from a single-file prototype into a clearer static project structure

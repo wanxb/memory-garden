@@ -1,0 +1,43 @@
+:root {
+  --bg1: #07111f;
+  --bg2: #102845;
+  --glow: #8ee7ff;
+  --leaf: #7cf0c6;
+  --pink: #ffc2de;
+  --gold: #fff0d2;
+  --text: #ecf7ff;
+  --muted: rgba(236,247,255,.72);
+  --card: rgba(255,255,255,.08);
+  --border: rgba(255,255,255,.16);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+.ghost-link {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: .2s ease;
+  font: inherit;
+}
+
+button:hover,
+.ghost-link:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.14);
+}
